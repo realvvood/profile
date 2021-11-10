@@ -1,0 +1,78 @@
+:root{
+	--shortcutEnd: 70px;
+	--shortcutWidth: 490px;
+}
+
+html {
+	display:table;
+    margin: auto;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70px, rgba(80,80,80,1) 100%);
+}
+body {
+	margin: auto;
+	height: 100%;
+	width: 490px;
+}
+
+/*main page body*/
+.indexBody {
+}
+
+/*top bar with user shortcuts*/
+.shortcuts img {
+	height: var(--shortcutEnd);
+	width: calc(var(--shortcutWidth)/7);
+}
+
+/*everything under the shortcuts*/
+.mainpage {
+	border-collapse: separate;
+	border-radius: 10px;
+	
+	background: url("bg.png");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 490px;
+	
+	display:table;
+    float: left;
+	height: calc(100% - var(--shortcutEnd) - 10px);
+	width: var(--shortcutWidth);
+}
+
+/*sidebar with relevant events and images*/
+.sidebar {
+	margin: 5px;
+	max-width: 170px;
+	overflow-y: scroll;
+	height: calc(100% - 15px);
+}
+.sidebar img{
+	border-radius: 10px;
+    margin: 1px 0px;
+}
+.sidebarImages img{
+	height: 200px;
+	width: 150px;
+	border: 3px solid transparent;
+	transition: 0.2s;
+}
+.sidebarImages img:hover {
+   border: 3px solid grey;
+}
+
+.fade {
+	border-radius: 10px;
+	
+	position:absolute;
+	width: 200px;
+	height: 30px
+}
+
+/*hide scrollbar*/
+::-webkit-scrollbar {
+display: none;
+}
