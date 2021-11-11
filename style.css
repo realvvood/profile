@@ -5,18 +5,13 @@
 
 
 html {
-	scrollbar-width: none;
-	
 	display:table;
-	margin: auto;
+    margin: auto;
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70px, rgba(80,80,80,1) 100%);
 }
 body {
-	scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
-	-ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
-	
 	margin: auto;
 	height: 100%;
 	width: 490px;
@@ -162,5 +157,5 @@ body {
 
 /*hide scrollbars*/
 ::-webkit-scrollbar {
-	display: none;
+display: none;
 }
