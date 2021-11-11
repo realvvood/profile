@@ -84,6 +84,7 @@ body {
 .sidebar {
 	margin: 0px 0px;
 	overflow-y: scroll;
+	scrollbar-width: none; /*remove scrollbar Mozilla*/
 	height: 100%;
 }
 .sidebarElements {
