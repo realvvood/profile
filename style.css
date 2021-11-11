@@ -12,7 +12,6 @@ html {
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70px, rgba(80,80,80,1) 100%);
 }
 body {
-	scrollbar-width: none;
 	margin: auto;
 	height: 100%;
 	width: 490px;
@@ -157,6 +156,18 @@ body {
 
 
 /*hide scrollbars*/
-::-webkit-scrollbar {
-	display: none;
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+	html{
+        	scrollbar-width: none;
+            }
+}
+body {
+	margin: 0; /* remove default margin */
+	scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+	-ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+	overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+	width: 0px;
+	background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
