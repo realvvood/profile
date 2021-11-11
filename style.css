@@ -156,9 +156,6 @@ body {
 
 
 /*hide scrollbars*/
-@-moz-document url-prefix() {
-	html,body{overflow: hidden !important;}
-}
 ::-webkit-scrollbar {
 	display: none;
 }
