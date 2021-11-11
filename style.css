@@ -6,7 +6,8 @@
 
 html {
 	display:table;
-    margin: auto;
+	scrollbar-width: none;
+	margin: auto;
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70px, rgba(80,80,80,1) 100%);
@@ -157,5 +158,5 @@ body {
 
 /*hide scrollbars*/
 ::-webkit-scrollbar {
-display: none;
+	display: none;
 }
