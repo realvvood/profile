@@ -12,13 +12,19 @@ html {
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70px, rgba(80,80,80,1) 100%);
 }
 body {
-	margin: auto;
+	margin: 0;
 	height: 100%;
-	width: 490px;
+	width: 100%;
 }
 
 
 /*top bar with user shortcuts*/
+.shortcuts {
+	position: relative;
+	
+	left: calc((100% - var(--shortcutWidth))/2);
+	overflow: hidden;
+}
 .shortcuts img {
 	height: var(--shortcutEnd);
 	width: calc(var(--shortcutWidth)/7);
@@ -38,11 +44,13 @@ body {
 	background-size: 490px;
 	overflow: hidden;
 	
-	display: table;
-	float: left;
+	margin: 0 calc((100% - var(--shortcutWidth))/2);
 	height: calc(100% - var(--shortcutEnd) - 10px);
 	width: var(--shortcutWidth);
-	
+}
+.mainpageContent {
+	display: table;
+	height: 100%;
 	animation: fadeInAnimation ease 1s;
 	animation-fill-mode: forwards;
 }
@@ -152,9 +160,34 @@ body {
 	position: absolute;
 	
 	width: var(--shortcutWidth);
-	height: 12px
+	height: 12px;
 }
 
+
+.back {
+	position: absolute;
+	
+	top: var(--shortcutEnd);
+	left: calc(50% - var(--shortcutWidth)/2 - 100px);
+	width: 100px;
+	height: calc(100% - var(--shortcutEnd) - 10px);
+}
+.backArrow {
+	position: relative;
+	
+	float: right;
+	top: calc(50% - 25px);
+	width: 20px;
+	height: 50px;
+	
+	opacity: 0.2;
+	right: 20px;
+	transition: 0.5s;
+}
+.back:hover .backArrow {
+	right: 60px;
+	opacity: 0.8;
+}
 
 /*hide scrollbars*/
 ::-webkit-scrollbar {
