@@ -70,7 +70,7 @@ body {
 .headingImg {
 	border-radius: 5px;
 	margin: 10px;
-	width: calc(var(--shortcutWidth) - 20px);
+	width: 680px;
 	height: 200px;
 }
 
