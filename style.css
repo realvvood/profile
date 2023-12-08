@@ -3,16 +3,82 @@
 	--shortcutWidth: 490px;
 }
 
-
 html {
 	display:table;
 	margin: auto;
 	height: 100%;
 	width: 100%;
-	background: rgba(80,80,80,1);
+	background: white;
 }
 body {
 	margin: 0;
-	height: 100%;
-	width: 100%;
-}
+    padding: 0;
+    display: flex;
+    height: 97vh;
+    flex-direction: column;
+    justify-content: space-between;
+	
+	/* style B) */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 1000;
+	
+	/* animate fadein */
+	opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+	}
+	
+	.shortcuts {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom:auto;
+		text-align: center;
+		
+		display: flex;
+		flex-direction: column;
+		max-width: 95vw;
+	}
+	
+	.shortcuts .icons, .shortcuts .text {
+		flex-direction: column;
+		padding: 10px;
+	}
+	
+	.shortcuts img {
+		max-width: 80px;
+		max-height: auto;
+	}
+	
+	.shortcuts a {
+		padding-left:10px;
+		padding-right:10px;
+		
+		text-decoration:none;
+		color:black;
+		opacity: 0.6;
+		transition: 0.5s;
+	}
+	
+	.shortcuts a:hover {
+      opacity: 1
+    }
+	
+	.footer, .footer a {
+		text-align: center;
+		color: gray;
+		font-weight: 300;
+	}
+	
+	.logo {
+			padding-top: 10vh;
+			min-width: 97vw;
+	}
+	
+	@keyframes fadeIn {
+		from {
+			opacity: 0; /* Start with opacity 0 */
+		}
+		to {
+			opacity: 1; /* End with opacity 1 */
+		}
+	}
