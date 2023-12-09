@@ -41,7 +41,7 @@ body {
 	
 	.shortcuts .icons, .shortcuts .text {
 		flex-direction: column;
-		padding: 10px;
+		padding-top: 20px;
 	}
 	
 	.shortcuts img {
@@ -49,16 +49,20 @@ body {
 		max-height: auto;
 	}
 	
-	.shortcuts a {
+	.shortcuts .icons a {
+		padding-left:20px;
+		padding-right:20px;
+	}
+	.shortcuts .text a {
 		padding-left:10px;
 		padding-right:10px;
-		
+	}
+	.shortcuts a {
 		text-decoration:none;
 		color:black;
 		opacity: 0.6;
 		transition: 0.5s;
 	}
-	
 	.shortcuts a:hover {
       opacity: 1
     }
@@ -70,8 +74,8 @@ body {
 	}
 	
 	.logo {
-			padding-top: 10vh;
-			min-width: 97vw;
+			padding-top: 15vh;
+			max-width: 97vw;
 	}
 	
 	@keyframes fadeIn {
